@@ -1,6 +1,6 @@
 import { FC, useState, FormEvent } from 'react';
 import { FadeIn } from '@/components/ui/FadeIn';
-import { Phone, Mail, Instagram, Send, CheckCircle2 } from 'lucide-react';
+import { Phone, Mail, Instagram, Send, CheckCircle2, MapPin } from 'lucide-react';
 
 export const Contact: FC = () => {
   const [status, setStatus] = useState<'idle' | 'submitting' | 'success'>('idle');
@@ -58,6 +58,16 @@ export const Contact: FC = () => {
                        <p className="text-lg font-semibold text-white">hello@jbsgardenservice.com</p>
                      </div>
                    </a>
+
+                   <div className="flex items-start gap-5 group">
+                     <div className="w-12 h-12 rounded-full bg-white/10 flex items-center justify-center group-hover:bg-primary-600 transition-colors shrink-0">
+                       <MapPin className="w-5 h-5 text-primary-200 group-hover:text-white" />
+                     </div>
+                     <div>
+                       <p className="text-sm text-sage-300 font-medium mb-1">Our Location</p>
+                       <p className="text-lg font-semibold text-white">Cairns, Queensland, Australia 4870</p>
+                     </div>
+                   </div>
 
                    <a href="https://www.instagram.com/jbsgardenservice" target="_blank" rel="noreferrer" className="flex items-start gap-5 group">
                      <div className="w-12 h-12 rounded-full bg-white/10 flex items-center justify-center group-hover:bg-gradient-to-tr from-yellow-400 via-pink-500 to-purple-500 transition-all shrink-0">
